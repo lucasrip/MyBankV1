@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <title>MY-Bank $$</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <link rel="shortcut icon" href="img/pork.ico" />
+ <script src="https://kit.fontawesome.com/d688834cca.js"></script>
+ <link rel="stylesheet" href="css/estilo.css" >
+ <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One|Saira+Stencil+One&display=swap">
+ 
+  <script type="text/javascript" src="js/script.js" ></script>
+  
+</head>
+<body>
+  
+  
+  <div class="container">
+     <div class="topo">
+	 
+	  <img src="img/logo.png" alt="muio porco pouca aranha">
+	 </div>
+ 
+   <div class="entrada">
+   
+   <div id="cadastrar">
+      <input type="texto" placeholder="Nome" id="nome" name="nome" maxlength="40"  required>
+      <input type="texto" placeholder="Saldo" id="saldo" name="saldo" max="9999999" maxlength="8" onkeyup="numeros(saldo)">
+	  
+	  <button type="button" class="btn btn-size" id="cadastra" onclick="recebe_saldo(nome)">Enviar <i class="fas fa-book"></i></button>
+	  <button type="button" class="btn btn-size" id="env_desbloquear" onclick="return trocar(cadastrar)">Fechar <i class="fas fa-times"></i></button>
+   </div>
+   
+   <div id="depositar">
+      <input type="texto" placeholder="Deposito" id="valor_deposito" name="valor_deposito" max="99999999"maxlength="8" onkeyup="numeros(valor_deposito)">
+	  
+	  <button class="btn btn-size" id="deposito" onclick="deposito()">Enviar <i class="fas fa-book"></i></button>
+	  <button class="btn btn-size" id="env_desbloquear" onclick="return trocar(depositar);">Fechar <i class="fas fa-times"></i></button>
+   </div>   
+   
+   <div id="creditar">
+     
+      <input type="texto" placeholder="credita" id="creditar_valor" name="credita" max="99999999 "maxlength="8" onkeyup="numeros(creditar_valor)">
+	  
+	  <button class="btn btn-size" id="env_credita" onclick="credito()">Enviar <i class="fas fa-book"></i></button>
+	  <button class="btn btn-size" id="env_desbloquear" onclick="return trocar(creditar);">Fechar <i class="fas fa-times"></i></button>
+   </div>   
+   
+  
+   
+   </div>
+   <div class="meio">
+       <ul class="menu">
+	     <li><button class="btn" id="btn1" onclick="return trocar(cadastrar);">cadastrar <i class="fas fa-plus"></i></button></li>
+		 <li><button class="btn" id="btn2" onclick="return trocar(depositar);">Depositar <i class="fas fa-money-bill-wave"></i></button></li>
+		 <li><button class="btn" id="btn3" onclick="return trocar(creditar);">Creditar <i class="fas fa-cash-register"></i></button></li>
+		 <li><button class="btn"  onclick="apaga(creditar_valor,valor_deposito,saldo,nome)">Apaga <i class="far fa-trash-alt"></i></i></button></li>
+	   </ul>
+   </div>
+   
+   <div class="saida">
+   
+    <div id="mostra_registro">
+	 <ul>
+       <li><label><!--Nome-->  <output id="mostra_nome"> </output></label></li>
+       <li><label><!--Saldo-->  <output id="mostra_saldo"> </output></label></li>
+	  </ul>
+	 </div>
+	 
+	  <div id="mostra_deposito">
+	     <ul>
+		   
+           <li><label><!--Nome :--> <output id="mostra_nome_cadastro"> </output></label></li>
+           <li><label><!--Saldo :--> <output id="mostra_saldo_cadastro"> </output></label></li>
+	       <li><label><!--deposito : --><output id="mostra_qtd_depositada"> </output></label></li>
+	       <li><label><!--Saldo-atual : --><output id="mostra_saldo_atual"> </output></label></li>
+	    </ul>
+	  </div>
+	  
+	  <div id="mostra_creditar">
+	     <ul>
+           <li><label><!--Nome :--> <output id="nm_cadastro"> </output></label></li>
+           <li><label><!--Saldo :--> <output id="saldo_cadastro"> </output></label></li>
+	       <li><label><!--credita : --><output id="retirado"> </output></label></li>
+	       <li><label><!--Saldo-atual : --><output id="saldo_atual_creditar"> </output></label></li>
+	    </ul>
+	  </div>
+
+
+	</div>
+	 <label><!--Saldo-atual : --><output id="array_nm"> </output></label>
+	 <label><!--Saldo-atual : --><output id="array_sl"> </output></label>
+	
+	 
+</div>
+   
+  </div>
+  
+<!-- Biblioteca que adicionara o código -->
+   <script type="text/javascript" src="js/FileSaver.min.js"></script>
+   <!-- função ao clicar em salvar -->
+   
+<!--mask-->
+
+  
+ </body>
+</html>

@@ -1,0 +1,159 @@
+*
+{
+	border:px solid black;
+}
+body
+{
+	margin:5px auto;
+}
+.container
+{
+	
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr;
+	grid-template-rows: 170px 350px 0px;
+    grid-row-gap:13px;
+}
+
+/*dives*/
+.topo
+{
+ display:grid;
+ grid-column:1/4;
+ grid-row:1/1;
+ justify-content:center;
+ align-items:center;
+}
+.topo img
+{
+ margin-top:20px;	
+ width:350px;
+}
+.entrada
+{
+ display:grid;
+ grid-column:1/1;
+ grid-row:2/2;
+ justify-content:center;
+ align-items:center;
+ 
+}
+.meio
+{
+	
+ display:grid;
+ grid-column:2/2;
+ grid-row:2/4;
+ align-items:center;
+  justify-content:center;
+}
+.saida
+{
+	
+    display:grid;
+    grid-column:3/3;
+    grid-row:2/3;
+	text-align:center;
+    align-items:center;
+    justify-content:center; 
+	margin-top:10px; 
+	font-family: 'arial black';
+	font-size:20px;
+}
+/*divs*/
+/*btn*/
+.btn
+{
+	
+	list-style:none;
+ 	text-align:center;
+	width:160px;
+	padding:15px;
+	font-size:20px;
+	background-color:#000080;
+	border-radius:15px;
+	margin-top:10px; 
+	font-family: 'Saira Stencil One';
+	text-decoration:none;
+	color:#ffffff;
+}
+.btn-size
+{
+	font-size:20px;
+	width:110px;
+	padding:10px;
+}
+.menu li
+{
+	list-style:none;
+ 	text-align:center;
+}
+.btn:hover
+{
+	background-color: #009999;
+	border:0px solid #ffe6ff;
+}
+.saida li
+{
+	
+	list-style:none;
+ 	text-align:center;
+}
+/*fim btn*/	
+/*form*/
+input
+{
+	display:block;
+	padding:10px;
+	margin-bottom:5px;
+	border: 0px ;
+	border-bottom:1px solid black;
+	font-size:20px;
+}
+#cadastrar,#depositar,#creditar,#mostra_registro,#mostra_deposito,#mostra_creditar
+{
+	display:none;
+}
+/*form*/
+
+@media(max-width:800px)
+{
+	body
+	{
+		margin:0px 0px 0px 5px;
+	}
+.topo img
+{
+ margin-top:10px;	
+ width:250px;
+}
+
+input
+{
+	
+	padding:5px;
+	margin-bottom:5px;
+	border: 0px ;
+	border-bottom:1px solid black;
+	font-size:10px;
+}
+
+.btn
+{
+	width:80px;
+	padding:7px;
+	font-size:10px;
+	border-radius:8px;
+	margin-top:10px; 
+}
+.btn-size
+{
+	font-size:10px;
+	width:60px;
+	padding:5px;
+}
+.saida
+{  
+	font-size:10px;
+}
+}
