@@ -1,3 +1,0 @@
-salvar() em txt
-protecao alert
-mascara()
